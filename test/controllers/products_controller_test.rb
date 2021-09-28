@@ -3,6 +3,12 @@ require 'test_helper'
 class ProductsControllerTest < ActionDispatch::IntegrationTest
   setup do
     @product = products(:one)
+      @update = {
+        title: 'Loren Buffle',
+        description: 'Hello World',
+        image_url: '2.jpeg',
+        price: 20.1
+      }
   end
 
   test "should get index" do
