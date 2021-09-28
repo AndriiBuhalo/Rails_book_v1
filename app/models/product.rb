@@ -13,4 +13,7 @@ class Product < ApplicationRecord
     # соответствие значения поля регулярному выражению. В данный момент мы
     # просто проверим, что URL-адрес заканчивается одним из расширений: .gif,
     # .jpg или .png.
+    def self.latest
+        Product.order(:updated_at).last
+    end
 end
